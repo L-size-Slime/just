@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>登陆页面</title>
 <link rel="stylesheet" href="css/style.css"
 	type="text/css" />
 <script type="text/javascript"	src="js/jquery.min.js"></script>
@@ -32,7 +32,7 @@
 			return;
 
 		}
-		com.ajax({
+		/* com.ajax({
 			url : '${contextPath}/login/login.do',
 			data : $("#form_login").serialize(),
 			success : function(d) {
@@ -44,7 +44,7 @@
 					com.message("error", d.msg);
 				}
 			}
-		});
+		}); */
 	}
 </script>
 </head>
