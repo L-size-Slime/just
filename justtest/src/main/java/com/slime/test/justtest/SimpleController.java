@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/test" )
+@RequestMapping("/test" )//响应url中带有/test的请求
 public class SimpleController {
 	@RequestMapping(value = "hello", method = RequestMethod.GET)
     @ResponseBody
