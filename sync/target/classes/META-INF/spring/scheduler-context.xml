@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+       "
+	default-lazy-init="false">
+
+	<task:annotation-driven />
+	<task:scheduler id="sch" pool-size="10" />
+
+	<!-- 测试demo -->
+	<bean id="demoJob" class="com.sync.scheduler.DemoJob"></bean>
+	<!-- 人员进出 -->
+	<bean id="accessOfPersonsJob" class="com.sync.scheduler.AccessOfPersons"></bean>
+	<beans>
+		<task:scheduled-tasks scheduler="sch">
+			<!--每天1点执行一次 -->
+			<task:scheduled ref="demoJob" method="execute" cron="0 0/02 * * * ?" />
+			<!--每4分钟执行一次 -->
+			<task:scheduled ref="accessOfPersonsJob" method="execute"
+				cron="0 0/02 * * * ?" />
+		</task:scheduled-tasks>
+	</beans>
+</beans>

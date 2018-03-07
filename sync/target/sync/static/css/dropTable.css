@@ -1,0 +1,51 @@
+	.left{
+		width:120px;
+		float:left;
+	}
+	.left table{
+		background:#E0ECFF;
+	}
+	.left td{
+		background:#eee;
+	}
+	.right{
+		float:right;
+		width:100%;
+	}
+	.right table{
+		background:#E0ECFF;
+		width:100%;
+	}
+	.right td{
+		background:#fafafa;
+		text-align:center;
+		padding:2px;
+	}
+	.right td{
+		background:#E0ECFF;
+	}
+	.right td.drop{
+		background:#fafafa;
+		width:100px;
+	}
+	.right td.title{
+		width:100px;
+	}
+
+	.titleDiv{
+		width:100px;
+	}
+	
+	.right td.over{
+		background:#FBEC88;
+	}
+	.item{
+		text-align:center;
+		border:1px solid #499B33;
+		background:#fafafa;
+		width:100px;
+	}
+	.assigned{
+		border:1px solid #BC2A4D;
+	}
+	

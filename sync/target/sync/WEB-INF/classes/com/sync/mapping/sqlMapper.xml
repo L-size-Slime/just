@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sync.mapping.sqlMapper">
+	<select id="excuteSql" parameterType="string" resultType="java.util.HashMap">
+        <![CDATA[${value}]]>
+	</select>
+	<update id="excuteUpdateSql" parameterType="string">
+		<![CDATA[${value}]]>
+	</update>
+</mapper>
