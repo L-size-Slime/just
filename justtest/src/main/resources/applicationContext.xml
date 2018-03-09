@@ -24,9 +24,9 @@
            </mvc:message-converters>
     </mvc:annotation-driven>
     <mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
-    <bean
+    <!-- <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver"
         p:viewClass="org.springframework.web.servlet.view.JstlView" 
         p:prefix="/WEB-INF/"
-        p:suffix=".jsp" />
+        p:suffix=".jsp" /> -->
 </beans>

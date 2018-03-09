@@ -7,6 +7,7 @@
 <title>登陆页面</title>
 <link rel="stylesheet" href="css/style.css"
 	type="text/css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
 <script type="text/javascript"	src="js/jquery.min.js"></script>
 <script type="text/javascript"	src="js/common.js"></script>
 <script type="text/javascript"	src="js/layer/layer.js"></script>
@@ -17,9 +18,9 @@
 		var username = $("#username").val();
 		var password = $("#password").val();
 		if (username.trim() == "") {
-			/* com.message("error", "请输入用户名", function() {
+			 /* com.message("error", "请输入用户名", function() {
 				$("#username").focus();
-			}); */
+			});  */
 			layer.msg("请输入用户名");
 			return;
 
@@ -27,37 +28,32 @@
 		if (password.trim() == "") {
 			/* com.message("error", "请输入密码", function() {
 				$("#password").focus();
-			}); */
+			});  */
 			layer.msg("请输入密码");
 			return;
 
 		}
-		/* com.ajax({
+		com.ajax({
 			url : '${contextPath}/login/login.do',
 			data : $("#form_login").serialize(),
 			success : function(d) {
 				if (d.success) {
-					com.message("success", "系统登录成功", function() {
+					/* com.message("success", "系统登录成功", function() {
 						window.location.href = '${contextPath}/index.do';
-					})
+					}) */
+					layer.msg("登陆成功！");
+					window.location.href = '${contextPath}/index.do';
 				} else {
-					com.message("error", d.msg);
+					layer.msg("登陆失败...");
 				}
 			}
-		}); */
+		}); 
 	}
 </script>
 </head>
 <body>
 
-  <html lang="en-US">
-<head>
-  <meta charset="utf-8">
-    <title>Login</title>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
 
-</head>
     <div id="login">
       <form name='form-login'>
         <span class="fontawesome-user"></span>
@@ -69,7 +65,7 @@
         <input type="button" onclick="Login()" value="Login">
 
 </form>
-  
+  </div>
   
 
 </body>
